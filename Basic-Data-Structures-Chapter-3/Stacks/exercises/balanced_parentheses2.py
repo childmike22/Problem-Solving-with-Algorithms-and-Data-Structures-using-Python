@@ -9,7 +9,7 @@ symbol_dict = {
 def balanced_parentheses(string):
     opening_list = []
     if len(string) <= 1 or string[0] in symbol_dict.values():
-		return False
+        return False
 
     for symbol in string:
 	if symbol in symbol_dict.keys():
