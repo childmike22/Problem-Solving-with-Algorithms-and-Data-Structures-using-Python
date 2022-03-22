@@ -9,10 +9,10 @@ string2 = '(((())))'
 string3 = '()))'
 
 
-result_lst = []
-
-
 def balanced_parentheses(string):
+	
+    result_lst = []
+
     for s in string:
         if s in relationship.keys():
             result_lst.append(s)
