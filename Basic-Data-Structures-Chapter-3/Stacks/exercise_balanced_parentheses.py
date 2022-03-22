@@ -13,20 +13,20 @@ result_lst = []
 
 
 def balanced_parentheses(string):
-	for s in string:
-		if s in relationship.keys():
-			result_lst.append(s)
-		else:
-			if len(result_lst) == 0:
-				return False
-			else:
-				result_lst.pop()
-				
-				
-	if len(result_lst) == 0:
-		return True
+    for s in string:
+        if s in relationship.keys():
+            result_lst.append(s)
 	else:
-		return False
+	    if len(result_lst) == 0:
+	        return False
+	    else:
+		result_lst.pop()
+				
+				
+    if len(result_lst) == 0:
+	return True
+    else:
+	return False
 
 
 print(balanced_parentheses(string1))
