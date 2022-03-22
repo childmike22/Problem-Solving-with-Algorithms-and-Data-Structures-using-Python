@@ -21,7 +21,12 @@ def balanced_parentheses(string):
 				return False
 			else:
 				result_lst.pop()
-	return True
+				
+				
+	if len(result_lst) == 0:
+		return True
+	else:
+		return False
 
 
 print(balanced_parentheses(string1))
