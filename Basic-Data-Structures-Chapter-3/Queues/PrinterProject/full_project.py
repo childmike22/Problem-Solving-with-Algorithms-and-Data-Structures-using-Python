@@ -30,10 +30,7 @@ def simulation(num_seconds, pages_per_minute):
 
 def new_print_task():
 	num = random.randrange(1, 181)
-	if num == 180:
-		return True
-	else:
-		return False
+	return num == 180
 
 
 
