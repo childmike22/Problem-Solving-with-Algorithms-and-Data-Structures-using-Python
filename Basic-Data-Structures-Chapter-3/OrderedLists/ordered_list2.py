@@ -82,13 +82,35 @@ class OrderedList:
 		return found
 
 
+
+	def remove(self, num):
+		prev = None
+		next_val = None
+		found = False
+		current = self.head
+
+		while not found and current != None:
+			if num == current.get_data():
+				found = True
+				next_val = current.get_next()
+			else:
+				prev = current
+				current = current.get_next()
+
+		if found:
+			prev.set_next(next_val)
+		else:
+			return (f'We cant {num} in our linked lis :(!')
+
+
+
 	def add(self, num):
 		prev = None
 		current = self.head
 		stop = False
 
 		while current != None and not stop:
-			if current.get_data() > num:
+			if current.get_data() == num:
 				stop = True
 			else:
 				prev = current
@@ -104,8 +126,18 @@ class OrderedList:
 			temp.set_next(current)
 
 
+
+
+
+
 trial = OrderedList([45, 90, 32, -13, 987, 3, 21])
 trial.add(65)
 trial.add(43)
 trial.add(1002)
 print(trial)
+trial.remove(43)
+print(trial.remove(1))
+print(trial)
+
+print(trial.size())
+
